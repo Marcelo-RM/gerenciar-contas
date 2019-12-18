@@ -31,6 +31,7 @@ function getContas() {
 }
 
 function atualizaValores(contas) {
+    if(!contas){return;}
     var totalReceber = 0;
     var totalPagar = 0;
 
