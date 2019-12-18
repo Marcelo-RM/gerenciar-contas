@@ -48,7 +48,7 @@ function atualizaValores(contas) {
 
 function formatNumber(number){
     if(!number.toString().includes('.')){
-        number = number.toFixed(2);
+        number = Number(number).toFixed(2);
     }
 
     return Number(number).toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
@@ -61,4 +61,9 @@ function createEmptyContas() {
     }
 
     localStorage.setItem("contas", JSON.stringify(obj));
+}
+
+function deleteAll(){
+    localStorage.removeItem("contas");
+    document.location.reload();
 }

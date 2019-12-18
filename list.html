@@ -11,12 +11,34 @@
 <body>
     <nav class="navbar">
         <button class="navBack" onclick="onNavBack()"></button>
-        <h6 id="titleNavBar">A receber / A pagar</h6>
+        <h6 id="titleNavBar"></h6>
     </nav>
     <main>
+        <div class="buttons" style="padding: 10px 30px;">
+            <button onclick="showModal()">Adicionar +</button>
+        </div>
         <ul id="list">
             <!--Criação de lista dinamica-->
         </ul>
     </main>
+
+    <div class="modal" id="modal" onclick="closeModal(event)">
+        <div class="modalContent">
+            <h4>Adicionar</h4>
+            <div>
+                <label for="nome">Nome: </label>
+                <input type="text" name="nome" id="nome">
+            </div>
+            <div>
+                <label for="valor">Valor: </label>
+                <input type="number" name="valor" id="valor">
+            </div>
+
+            <div class="buttons">
+                <button class="btnError" onclick="closeModal(event)">Cancelar</button>
+                <button class="btnSuccess" onclick="addConta()">Adicionar</button>
+            </div>
+        </div>
+    </div>
 </body>
 </html>

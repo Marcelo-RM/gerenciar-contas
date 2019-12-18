@@ -137,7 +137,7 @@ ul {
     transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
 }
 
-.containerDetail button {
+.buttons button {
     display: inline-block;
     padding: 6px 12px;
     margin: 5px 0;
@@ -159,4 +159,71 @@ ul {
     color: var(--cor-fonte);
     border-radius: 5px;
     min-width: 137px;
+}
+
+.modal {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-color: #00000066;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    color: black;
+}
+
+.modalContent {
+    min-width: 200px;
+    padding: 30px;
+    border-radius: 10px;
+    margin: 20px;
+    background-color: var(--cor-suporte02);
+    line-height: 40px;
+}
+
+.modalContent div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.modalContent input {
+    border: 1px solid var(--cor-secundaria);
+    height: 25px;
+}
+
+.modalContent .buttons {
+    margin-top: 20px;
+    justify-content: flex-end;
+}
+
+.buttons .btnError {
+    background-color: var(--cor-error);
+    border-color: var(--cor-error);
+    padding: 5px;
+    min-width: 90px;
+    margin: 5px;
+}
+
+.buttons .btnSuccess {
+    background-color: var(--cor-success);
+    border-color: var(--cor-success);
+    padding: 5px;
+    min-width: 90px;
+    margin: 5px;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    padding: 5px;
+}
+
+footer button {
+    margin: auto;
+    color: red;
+    background-color: transparent;
+    border: none;
 }
