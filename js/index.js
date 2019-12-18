@@ -11,7 +11,8 @@ window.onload = function(){
 
 function navToList(event){
     var option = event.target.getAttribute("data-option");
-    
+    option = option ? option : event.target.parentElement.getAttribute('data-option');
+    option = option ? option : event.target.parentElement.parentElement.getAttribute('data-option');
     document.location.href = "list.html?" + option;
 }
 
