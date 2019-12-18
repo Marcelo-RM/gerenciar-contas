@@ -29,3 +29,7 @@ function createListItem(item){
     var list = document.createElement("li");
     
 }
+
+function onNavBack(){
+    window.history.back();
+}

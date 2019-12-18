@@ -12,3 +12,7 @@ function setTitle(option){
         document.getElementById('titleNavBar').innerText = "A pagar";
     }
 }
+
+function onNavBack(){
+    window.history.back();
+}
