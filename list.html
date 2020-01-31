@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Gerenciar contas</title>
     <link rel="stylesheet" href="css/master.css">
+    <link rel="stylesheet" href="css/MM.min.css">
     <script src="js/list.js"></script>
     <!-- Load SERVICE WORKER-->
     <script src="sw.js"></script>
@@ -21,39 +23,40 @@
     <meta name="msapplication-TileColor" content="#094074">
     <meta name="msapplication-TileImage" content="images/icons/icon-144x144.png">
     <meta name="theme-color" content="#094074">
-    <meta name="Description" content="Gerenciar contas progressive web app"></meta>
+    <meta name="Description" content="Gerenciar contas progressive web app">
+    </meta>
 </head>
+
 <body>
-    <nav class="navbar">
-        <button class="navBack" onclick="onNavBack()"></button>
-        <h6 id="titleNavBar"></h6>
+    <nav class="MM-NavHeader MM-Shadow MM-Destaque">
+        <button class="MM-NavBack navBack" onclick="onNavBack()"></button>
+        <h3 id="titleNavBar"></h3>
     </nav>
-    <main>
-        <div class="buttons" style="padding: 10px 30px;">
-            <button onclick="showModal()">Adicionar +</button>
-        </div>
-        <ul id="list">
+    <main class="MM-Container">
+        <button class="MM-Button MM-Button-Primary" onclick="showModal()">Adicionar +</button>
+        <br><br>
+        <ul id="list" class="MM-ListGroup">
             <!--Criação de lista dinamica-->
         </ul>
     </main>
 
     <div class="modal" id="modal" onclick="closeModal(event)">
-        <div class="modalContent">
-            <h4>Adicionar</h4>
-            <div>
-                <label for="nome">Nome: </label>
-                <input type="text" name="nome" id="nome">
+        <div class="MM-Panel">
+            <div class="MM-PanelHeader">
+                <h4 class="MM-Title">Adicionar</h4>
             </div>
-            <div>
-                <label for="valor">Valor: </label>
-                <input type="number" name="valor" id="valor">
+            <div class="MM-PanelBody">
+                <input class="MM-Input" type="text" name="nome" id="nome" placeholder="Nome">
+                <input class="MM-Input" type="number" name="valor" id="valor" placeholder="Valor">
             </div>
-
-            <div class="buttons">
-                <button class="btnError" onclick="closeModal(event)">Cancelar</button>
-                <button class="btnSuccess" onclick="addConta()">Adicionar</button>
+            
+            <div class="MM-PanelFooter">
+                <button class="MM-Button MM-Button-Error" id="btnCloseModal" onclick="closeModal(event)">Cancelar</button>
+                <button class="MM-Button MM-Button-Success" onclick="addConta()">Adicionar</button>
             </div>
         </div>
     </div>
+    </div>
 </body>
+
 </html>

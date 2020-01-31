@@ -1,8 +1,8 @@
 window.onload = function(){
-    var tiles = document.getElementsByClassName("tile");
-    tiles = Array.from(tiles);
+    var listItens = document.getElementById('list').children;
+    listItens = Array.from(listItens);
     
-    tiles.forEach(element => {
+    listItens.forEach(element => {
         element.onclick = navToList
     });
 

@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Gerenciar contas</title>
     <link rel="stylesheet" href="css/master.css">
+    <link rel="stylesheet" href="css/MM.min.css">
     <script src="js/detail.js"></script>
     <!-- Load SERVICE WORKER-->
     <script src="sw.js"></script>
@@ -21,30 +23,45 @@
     <meta name="msapplication-TileColor" content="#094074">
     <meta name="msapplication-TileImage" content="images/icons/icon-144x144.png">
     <meta name="theme-color" content="#094074">
-    <meta name="Description" content="Gerenciar contas progressive web app"></meta>
+    <meta name="Description" content="Gerenciar contas progressive web app">
+    </meta>
 </head>
+
 <body>
-    <nav class="navbar">
-        <button class="navBack" onclick="onNavBack()"></button>
-        <h6 id="titleNavBar"></h6>
+    <nav class="MM-NavHeader MM-Shadow MM-Destaque">
+        <button class="MM-NavBack navBack" onclick="onNavBack()"></button>
+        <h3 id="titleNavBar"></h3>
     </nav>
     <main>
-        <div class="containerDetail">
-            <h2 id="nome"></h2>
-            <h3 id="valor"></h3>
-            <h3 id="data"></h3>
-
+        <div class="MM-Container MM-Header">
+            <div class="MM-TextForm">
+                <div class="MM-TextFormRow">
+                    <span class="MM-TextFormLabel">Nome:</span>
+                    <span class="MM-TextFormValue" id="nome"></span>
+                </div>
+                <div class="MM-TextFormRow">
+                    <span class="MM-TextFormLabel">Valor:</span>
+                    <span class="MM-TextFormValue" id="valor"></span>
+                </div>
+                <div class="MM-TextFormRow">
+                    <span class="MM-TextFormLabel">Data:</span>
+                    <span class="MM-TextFormValue" id="data"></span>
+                </div>
+            </div>
         </div>
-        <div class="containerDetail">
-            <label for="valor">Digite um valor:</label>
-            <br>
-            <input type="number" name="valor" id="inputValor" />
+        <div class="MM-Container">
+            <div class="MM-Form">
 
-            <div class="buttons">
-                <button onclick="subConta()">Subtrair</button>
-                <button onclick="addConta()">Adicionar</button>
+                <label for="valor">Digite um valor:</label>
+                <input class="MM-Input" type="number" name="valor" id="inputValor" />
+
+                <div class="buttons">
+                    <button class="MM-Button MM-Button-Primary" onclick="subConta()">- Subtrair</button>
+                    <button class="MM-Button MM-Button-Primary" onclick="addConta()">+ Adicionar</button>
+                </div>
             </div>
         </div>
     </main>
 </body>
+
 </html>

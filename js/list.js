@@ -37,7 +37,7 @@ function createList(arrItens){
 
 function createListItem(item){
     var list = document.createElement("li");
-    list.className = "listItem";
+    list.className = "MM-ListItem MM-ListArrow";
     list.onclick = listItemClick;
     list.setAttribute("data-nome", item.nome);
 
@@ -95,7 +95,7 @@ function addConta(){
 //MODAL FUNCTIONS
 
 function closeModal(event){
-    if(event.target.id != "modal" && event.target.className != "btnError"){ 
+    if(event.target.id != "modal" && event.target.id != "btnCloseModal"){ 
         return; 
     }
     

@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Gerenciar contas</title>
-    <link rel="stylesheet" href="css/master.css">
+    <!-- <link rel="stylesheet" href="css/master.css"> -->
+    <link rel="stylesheet" href="css/MM.min.css">
     <script src="js/index.js"></script>
     <!-- Load SERVICE WORKER-->
     <script src="sw.js"></script>
@@ -24,30 +25,35 @@
     <meta name="Description" content="Gerenciar contas progressive web app"></meta>
 </head>
 <body>
-    <nav class="navbar">
-        <h6>Gerenciar contas</h6>
+    <nav class="MM-NavHeader MM-Shadow MM-Destaque">
+        <h3>Gerenciar contas</h3>
     </nav>
-    <main>
-        <div class="tile" data-option="receber">
-            <h2 class="tileTitle">A Receber</h2>
-            <div class="tileContent">
-                <span id="totalReceber" class="tileValue">
-                    <!--Valor dinamico-->
-                </span>
-            </div>
-        </div>
-
-        <div class="tile" data-option="pagar">
-            <h2 class="tileTitle">A Pagar</h2>
-            <div class="tileContent">
-                <span id="totalPagar" class="tileValue">
-                    <!--Valor dinamico-->
-                </span>
-            </div>
-        </div>
-    </main>
-    <footer>
-        <button style="font-size: 20px;" onclick="deleteAll()">Deletar tudo</button>
+    <main class="MM-Container">
+        <ul class="MM-ListGroup" id="list">
+            <li class="MM-ListItem MM-ListArrow">
+                <div class="" data-option="receber">
+                    <h2 class="">A Receber</h2>
+                    <div class="">
+                        <span id="totalReceber" class="">
+                            <!--Valor dinamico-->
+                        </span>
+                    </div>
+                </div>
+            </li>
+            <li class="MM-ListItem MM-ListArrow">
+                <div class="MM-Primary" data-option="pagar">
+                    <h2 class="">A Pagar</h2>
+                    <div class="">
+                        <span id="totalPagar" class="tileValue">
+                            <!--Valor dinamico-->
+                        </span>
+                    </div>
+                </div>
+            </li>
+        </ul>
+        </main>
+    <footer class="MM-Footer" style="position:fixed;bottom:0;">
+        <button class="MM-Button MM-Button-ErrorOutline" onclick="deleteAll()">Deletar tudo</button>
     </footer>
 </body>
 </html>
