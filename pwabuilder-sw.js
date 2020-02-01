@@ -10,6 +10,7 @@ self.addEventListener("install", function (event) {
                 'js/index.js',
                 'js/list.js',
                 'css/master.css',
+                'css/MM.min.css',
                 'images/icons/icon-72x72.png',
                 'images/icons/icon-96x96.png',
                 'images/icons/icon-128x128.png',
